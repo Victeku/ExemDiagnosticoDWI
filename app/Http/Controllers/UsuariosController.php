@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
+
 use App\Models\tipousuarios;
 use App\Models\usuarios;
 
@@ -18,7 +20,9 @@ class UsuariosController extends Controller
         $usuarios->password=$request->password;
         $usuarios->id_tipousu=$request->typeuser;
         $usuarios->save();
+        toast('El usuario ha sido de alta','success')->autoClose(2500)->timerProgressBar()->hideCloseButton();
         return redirect()-> route('reporteusuarios');
+        
     }
     public function reporteusuarios(){
 

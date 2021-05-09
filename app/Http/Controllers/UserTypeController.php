@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
+
+
 use App\Models\tipousuarios;
 
 class UserTypeController extends Controller
@@ -19,6 +22,7 @@ class UserTypeController extends Controller
         $tipousuarios = new tipousuarios;
         $tipousuarios->nombre=$request->nombre;
         $tipousuarios->save();
+        toast('Rol ha sido de Alta','success')->autoClose(2500)->timerProgressBar()->hideCloseButton();
         return redirect()-> route('reportetipousuario');
     }
 }

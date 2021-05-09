@@ -25,11 +25,8 @@
   <link rel="stylesheet" href="{{asset('form/css/styles.css')}}">
   <title>Examen Diagnostico</title>
 
-  <script>
-    $(document).ready(function () {
-      console.log("hola");
-    });
-  </script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="sweetalert2.all.min.js"></script>
 </head>
 
 <body>
@@ -166,6 +163,6 @@
 
 
   
-</form>
+@include('sweetalert::alert')
 
 </html>

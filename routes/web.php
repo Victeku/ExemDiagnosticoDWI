@@ -16,9 +16,6 @@ use App\Http\Controllers\UsuariosController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get('layout-main',[AccessController::class,'main'])->name('main');
 
@@ -28,4 +25,4 @@ Route::POST('guardartipousuario',[UserTypeController::class,'guardartipousuario'
 
 /*Tipo usuario */
 Route::POST('guardarusuario',[UsuariosController::class,'guardarusuario'])->name('guardarusuario');
-Route::get('reporte-usuarios',[UsuariosController::class,'reporteusuarios'])->name('reporteusuarios');
+Route::get('/',[UsuariosController::class,'reporteusuarios'])->name('reporteusuarios');
