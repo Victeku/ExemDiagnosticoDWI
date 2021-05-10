@@ -22,7 +22,10 @@
             <td>{{$user->apm}}</td>
             <td>{{$user->correo}}</td>
             <td>{{$user->tipo_usuario}}</td>
-            <td> <button class="btn btn-dark" type="button">Text</button> </td>
+            <td>
+                <a href="{{route('modificaruser',['id_usu'=>$user->id_usu])}}"><input class="btn btn-info" type="button" value="Modificar"></a>
+                <a href="{{route('borrauser',['id_usu'=>$user->id_usu])}}"><input class="btn btn-danger" type="button" value="Eliminar"></a>
+            </td>
         </tr>
         @endforeach
     </tbody>

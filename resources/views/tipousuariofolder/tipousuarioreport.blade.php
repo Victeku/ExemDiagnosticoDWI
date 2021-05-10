@@ -13,7 +13,10 @@
         <tr>
             <td>{{$tipo->id_tipousu}}</td>
             <td>{{$tipo->nombre}}</td>
-            <td> <button class="btn btn-dark" type="button">Text</button> </td>
+            <td>
+                <a href="{{route('borratipouser',['id_tipousu'=>$tipo->id_tipousu])}}"><input class="btn btn-info" type="button" value="Modificar"></a>
+                <a href="{{route('borratipouser',['id_tipousu'=>$tipo->id_tipousu])}}"><input class="btn btn-danger" type="button" value="Eliminar"></a>
+            </td>
         </tr>
         @endforeach
     </tbody>

@@ -11,8 +11,10 @@ use App\Models\tipousuarios;
 class AccessController extends Controller
 {
     public function main(){
+      
         $tipouser=tipousuarios::all();
         return view('layoutmain')
-        ->with('tipouser',$tipouser);
+        ->with('tipouser',$tipouser)
+        ->with('idsigue',$idsigue);
     }
 }

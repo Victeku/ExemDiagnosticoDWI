@@ -23,6 +23,7 @@
   <link href="https://kit-pro.fontawesome.com/releases/v5.15.3/css/pro.min.css" rel="stylesheet">
   <!--Estilos-->
   <link rel="stylesheet" href="{{asset('form/css/styles.css')}}">
+  <link rel="stylesheet" href="{{asset('form/css/styles2.css')}}">
   <title>Examen Diagnostico</title>
 
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
@@ -147,6 +148,7 @@
           <div class="l-form">
             <form action="{{route('guardartipousuario')}}" method="POST"  class="form">
             {{csrf_field()}}
+           
               <div class="form__div">
                 <input type="text" name="nombre" class="form__input" placeholder=" ">
                 <label for="" class="form__label"><i class="far fa-user-tag"></i> Tipo</label>
